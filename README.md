@@ -80,3 +80,4 @@ para lo anterior aveces pide su usuario de github y una contraseña, si pasa ent
 entonces van a (settings,developer settings,personal access token, tokens classic, generate new token)
 por ultimo le da los permisos necesarios al token par que funcione como contraseña de un repositorio
 lo genera lo copia y lo pega en la contraseña y listo todo debe quedar subido en el github
+# minibanco
