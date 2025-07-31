@@ -1,0 +1,39 @@
+{% extends "components/layout.html" %}
+
+{% block title %}Put Money in Account{% endblock %}
+{% block content %}
+    <div class="row m-md-5 m-3">
+        <h1 class="col">FastAPI Form</h1>
+    </div>
+
+    <form method="post" action="/update_money" class="row g-3 mx-sm-5 mx-2">
+        <div class="col-md-3">
+            <label for="validationDefault01" class="form-label">Cuenta a la que va a enviar dinero</label>
+            <select name="type_account" class="form-select" id="validationDefault01" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="ah">Ahorros</option>
+                <option value="co">Corriente</option>
+                <option value="ex">Expréss</option>
+                <option value="no">Nómina</option>
+                <option value="pe">Pensión</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="validationDefault03" class="form-label">Cantidad de dinero que va a ingresar</label>
+            <input name="money_in" type="text" class="form-control" id="validationDefault03" required />
+        </div>
+        <div class="col-md-3">
+            <label for="validationDefault04" class="form-label">Escriba la Contraseña de su cuenta</label>
+            <input
+                name="password_account"
+                type="password"
+                class="form-control"
+                id="validationDefault04"
+                required
+            />
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Send Data</button>
+        </div>
+    </form>
+{% endblock %}

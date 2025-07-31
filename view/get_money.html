@@ -1,0 +1,25 @@
+{% extends "components/layout.html" %}
+
+{% block title %}Dinero en cuenta{% endblock %}
+{% block content %}
+    <div class="row m-md-5 m-3">
+        <h1 class="col">FastAPI Form</h1>
+    </div>
+
+    <form method="post" action="/get_money" class="row g-3 mx-sm-5 mx-2">
+        <div class="col-md-3">
+            <label for="validationDefault01" class="form-label">Cuenta de la que quiere ver el dinero almacenado</label>
+            <select name="type_account" class="form-select" id="validationDefault01" required>
+                <option selected disabled value="">Choose...</option>
+                <option value="ah">Ahorros</option>
+                <option value="co">Corriente</option>
+                <option value="ex">Expréss</option>
+                <option value="no">Nómina</option>
+                <option value="pe">Pensión</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Send Data</button>
+        </div>
+    </form>
+{% endblock %}
